@@ -46,9 +46,6 @@ module.exports = class extends Generator {
     // Copy all non-dotfiles in common
     this.fs.copy(this.templatePath("**/*"), this.destinationRoot());
 
-    // Copy all dotfiles in common
-    this.fs.copy(this.templatePath(".*"), this.destinationRoot());
-
     // Copy package.json
     this.fs.copyTpl(
       this.templatePath("package.json"),
