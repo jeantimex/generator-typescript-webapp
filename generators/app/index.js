@@ -1,15 +1,10 @@
 const Generator = require("yeoman-generator");
-const chalk = require("chalk");
 const yosay = require("yosay");
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(
-        `Welcome to the smashing ${chalk.red("typescript-webapp")} generator!`
-      )
-    );
+    this.log(yosay(`Welcome to the smashing typescript-webapp generator!`));
 
     const prompts = [
       {
@@ -75,9 +70,5 @@ module.exports = class extends Generator {
         version: this.props.version,
       }
     );
-  }
-
-  install() {
-    this.npmInstall();
   }
 };
